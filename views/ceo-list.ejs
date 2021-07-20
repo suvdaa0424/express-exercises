@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <title>
+        <%= title %>
+    </title>
+    <a href="/">Home</a> -->
+    <%- include('partials/head') %>
+</head>
+
+<body>
+    <!-- <h1>Ceo's</h1> -->
+    <%- include('partials/nav') %> 
+    <p>
+        <% db.forEach((ceo)=> { %>
+            <h2>
+                <%= ceo.name %>
+            </h2>
+            <a href="/ceo-details/<%= ceo.id %> ">View Details</a>
+            <% }); %>
+    </p>
